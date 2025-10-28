@@ -5,7 +5,7 @@
  *   haciendo uso de la deestructuración de Arrays.
  */
 //* EXPENDIENTE - Representación de un expediente de FP
-interface Expediente {
+export interface Expediente {
     curso : string,                     // Curso
     notaMedia : number                  // Nota media
 }// ---------------------------------------------------------------------
@@ -18,11 +18,11 @@ interface AlumnoFP {
 }// ---------------------------------------------------------------------
 //* PROGRAMA ------------------------------------------------------------
 // Creación objetos Expediente ----------------------
-const expediente1 : Expediente = {
+export const expediente1 : Expediente = {
     curso : "Desarrollo de Aplicaciones Multiplataforma",
     notaMedia : 10
 };
-const expediente2 : Expediente = {
+export const expediente2 : Expediente = {
     curso : "Animación 3D y 2D",
     notaMedia : 9
 };

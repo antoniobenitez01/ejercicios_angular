@@ -6,7 +6,8 @@ import './style.css'
 //import './di36.ts'
 //import './di37.ts'
 //import './di38.ts'
-import './t9modulo-alumnos'
+//import './t9modulo-alumnos'
+import './di310.ts';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
