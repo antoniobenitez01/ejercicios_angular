@@ -9,7 +9,9 @@ import './style.css'
 //import './t9modulo-alumnos'
 //import './di310.ts';
 //import './di311.ts';
-import './di312.ts';
+//import './di312.ts';
+//import './di313.ts';
+import './di314.ts';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>

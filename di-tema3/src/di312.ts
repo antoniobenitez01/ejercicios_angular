@@ -7,7 +7,7 @@
 //* CREACIÓN CLASE PERSONA              ----------------------------------------------------
 
 // DIRECCIÓN - Interfaz que representa la Dirección de una persona
-interface Direccion {
+export interface Direccion {
     calle : string;
     cp : number;                          // Código Postal
     localidad : string;
@@ -42,7 +42,7 @@ export class Jugador extends Persona{
 }
 
 // EQUIPO - Interfaz que representa un equipo con dos objetos Jugador
-interface Equipo {
+export interface Equipo {
     jugador1 : Jugador;
     jugador2 : Jugador;
 }
@@ -112,45 +112,42 @@ export class Partido {
 //* CREACIÓN DE OBJETOS                 -----------------------------------------------------
 
 // Creación objetos Dirección
-const dir1 : Direccion = {calle : "Las Flores", cp : 29676, localidad : "Torremolinos", provincia : "Málaga"};  //  Dirección 1
-const dir2 : Direccion = {calle : "Turmalina", cp : 29512, localidad : "Benalmádena", provincia : "Málaga"};    //  Dirección 2
+export const dir1 : Direccion = {calle : "Las Flores", cp : 29676, localidad : "Torremolinos", provincia : "Málaga"};  //  Dirección 1
+export const dir2 : Direccion = {calle : "Turmalina", cp : 29512, localidad : "Benalmádena", provincia : "Málaga"};    //  Dirección 2
 
 // Creación objetos Jugador
-const jg1 = new Jugador("Antonio","Benítez Rodríguez","Hombre","+34 659887766",dir1,5);
-const jg2 = new Jugador("María","López Torres","Mujer","+34 660765867",dir2,2);
-const jg3 = new Jugador("Félix","Sánchez Trujillo","No binario","+34 985454554",dir1,1);
+export const jg1 = new Jugador("Antonio","Benítez Rodríguez","Hombre","+34 659887766",dir1,5);
+export const jg2 = new Jugador("María","López Torres","Mujer","+34 660765867",dir2,2);
+export const jg3 = new Jugador("Félix","Sánchez Trujillo","No binario","+34 985454554",dir1,1);
 
 // Creación objetos Equipo
-const equipo1 : Equipo = {jugador1 : jg1, jugador2 : jg2}
-const equipo2 : Equipo = {jugador1 : jg2, jugador2 : jg3}
-const equipo3 : Equipo = {jugador1 : jg3, jugador2 : jg1}
+export const equipo1 : Equipo = {jugador1 : jg1, jugador2 : jg2}
+export const equipo2 : Equipo = {jugador1 : jg2, jugador2 : jg3}
+export const equipo3 : Equipo = {jugador1 : jg3, jugador2 : jg1}
 
 // Creación objetos Arbitro
-const arbitro1 = new Arbitro("Marcos","García Pilar","Hombre","+34 675867665",dir2,23214);
-const arbitro2 = new Arbitro("Pilar","Milagros Gómez","Mujer","+34 987564534",dir1,54232);
+export const arbitro1 = new Arbitro("Marcos","García Pilar","Hombre","+34 675867665",dir2,23214);
+export const arbitro2 = new Arbitro("Pilar","Milagros Gómez","Mujer","+34 987564534",dir1,54232);
 
 // Creación objetos Date
-const date1 = new Date();
-const date2 = new Date(2015,10,28);
-const date3 = new Date(2024,3,15);
+export const date1 = new Date();
+export const date2 = new Date(2015,10,28);
+export const date3 = new Date(2024,3,15);
 
 // Creación objetos Set
-const set1 : Set = {puntos1: 5,puntos2: 10};
-const set2 : Set = {puntos1: 10,puntos2: 2};
-const set3 : Set = {puntos1: 7,puntos2: 5};
-const set4 : Set = {puntos1: 10,puntos2: 7};
-const set5 : Set = {puntos1: 3,puntos2: 5};
+export const set1 : Set = {puntos1: 5,puntos2: 10};
+export const set2 : Set = {puntos1: 10,puntos2: 2};
+export const set3 : Set = {puntos1: 7,puntos2: 5};
+export const set4 : Set = {puntos1: 10,puntos2: 7};
+export const set5 : Set = {puntos1: 3,puntos2: 5};
 
 // Creación objetos Partido
-const partido1 = new Partido(equipo1,equipo3,date1,15,"Torrejarral",3,arbitro1,[set1,set2,set3]);
-const partido2 = new Partido(equipo2,equipo3,date3,20,"Cruz Norte",1,arbitro1,[set3,set4]);
-const partido3 = new Partido(equipo3,equipo1,date2,18,"Marcalara",2,arbitro2,[set2,set5,set4,set1]);
+export const partido1 = new Partido(equipo1,equipo3,date1,15,"Torrejarral",3,arbitro1,[set1,set2,set3]);
+export const partido2 = new Partido(equipo2,equipo3,date3,20,"Cruz Norte",1,arbitro1,[set3,set4]);
+export const partido3 = new Partido(equipo3,equipo1,date2,18,"Marcalara",2,arbitro2,[set2,set5,set4,set1]);
 
 //* PROGRAMA                            -----------------------------------------------------
 
-var calendario = [partido1,partido2,partido3];
-console.info(calendario);
-calendario.forEach((partido) => {
-    console.log(partido.getWinner())
-})
+export const calendario = [partido1,partido2,partido3];
+export const jugadores = [jg1,jg2,jg3];
 
