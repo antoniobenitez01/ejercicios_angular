@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
+
+body{font-family:"Funnel Display", sans-serif;color:white;}
+
+h1{
+  font-size:6vw;
+  text-align:center;
+  margin-top:15vh;
+  width:35vw;
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom:2vh;
+  transition:0.25s
+}
+
+h1:hover{transform:scale(1.1);}
+
+h3{
+  font-size:3em;
+  background-color:rgb(54, 54, 54);
+  font-size:4vw;
+  padding:3.5vw;
+  padding-top:2vw;
+  padding-bottom:2vw;
+  border-radius:100%;
+  margin-top:2vh;
+  margin-bottom:3vh;
+}
+
+div{display:flex;align-items:center;justify-content:center}
+
+button{
+  margin:1vw;
+  padding:1.5vw;
+  padding-top:1vw;
+  padding-bottom:1vw;
+  border-radius:2vw;
+  font-size:1.25vw;
+  border: none;
+  color:white;
+  background-color:rgb(36, 36, 36);
+  transition: 0.1s
+}
+
+button:hover{transform:scale(1.1);}
+
+button:active{transform:scale(0.9);background-color:rgb(109, 0, 73);}

@@ -83,27 +83,23 @@ export class Partido {
 
     getWinner() : string {
         let resultado : string = "";
-        if(equipo2 != undefined){
-            var total1 = 0;
-            var total2 = 0;
-            this.sets.forEach((set) => {
-                if(set.puntos1 > set.puntos2){
-                    total1++;
-                }else if (set.puntos1 < set.puntos2){
-                    total2++;
-                }
-            });
-            var strEquipo1 = `${this.equipo1.jugador1.nombre}-${this.equipo1.jugador2.nombre}`
-            var strEquipo2 = `${this.equipo2!.jugador1.nombre}-${this.equipo2!.jugador2.nombre}`
-            if(total1 == total2){
-                resultado = `El equipo ${strEquipo1} ha empatado al equipo ${strEquipo2} por ${total1} sets a ${total2}`;
-            }else if(total1 > total2){
-                resultado = `El equipo ${strEquipo1} ha ganado al equipo ${strEquipo2} por ${total1} sets a ${total2}`;
-            }else{
-                resultado = `El equipo ${strEquipo2} ha empatado al equipo ${strEquipo1} por ${total2} sets a ${total1}`;
+        var total1 = 0;
+        var total2 = 0;
+        this.sets.forEach((set) => {
+            if(set.puntos1 > set.puntos2){
+                total1++;
+            }else if (set.puntos1 < set.puntos2){
+                total2++;
             }
+        });
+        var strEquipo1 = `${this.equipo1.jugador1.nombre} ${this.equipo1.jugador2.nombre}`
+        var strEquipo2 = `${this.equipo2?.jugador2.nombre || "Sin"} ${this.equipo2?.jugador2.nombre || "equipo"}`
+        if(total1 == total2){
+            resultado = `El equipo ${strEquipo1} ha empatado al equipo ${strEquipo2} por ${total1} sets a ${total2}`;
+        }else if(total1 > total2){
+            resultado = `El equipo ${strEquipo1} ha ganado al equipo ${strEquipo2} por ${total1} sets a ${total2}`;
         }else{
-            resultado = "No hay rival disponible para este partido.";
+            resultado = `El equipo ${strEquipo2} ha empatado al equipo ${strEquipo1} por ${total2} sets a ${total1}`;
         }
         return resultado;
     }
@@ -150,3 +146,5 @@ function emparejamiento(partido : Partido): string{
 export const calendario = [partido1,partido2,partido3];
 
 imprimirCalendario(calendario);
+
+console.log(partido2.getWinner())

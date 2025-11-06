@@ -8,11 +8,8 @@ import {calendario,jugadores} from './di312.ts';
 
 // -- MOSTRAR ARRAY - Recibe un Array genérico y muestra todas las posiciones del mismo
 function mostrarArray<T> ( arrayGenerico: T[]): void {
-    let contador : number = 1;
-    arrayGenerico.forEach((elemento) => {
-        console.log(`${contador}.`)
-        console.info(elemento);
-        contador++;
+    arrayGenerico.forEach((elemento,contador) => {
+        console.log(`${contador+1}.`,elemento)
     });
 }
 

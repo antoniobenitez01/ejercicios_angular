@@ -11,7 +11,7 @@ import './style.css'
 //import './di311.ts';
 //import './di312.ts';
 //import './di313.ts';
-import './di314.ts';
+//import './di314.ts';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
