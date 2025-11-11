@@ -1,9 +1,12 @@
 import { Component, signal } from '@angular/core';
+import { HeroeComponent } from "./heroes/heroe/heroe";
+import { ListaComponent } from "./heroes/lista/lista";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
+  imports: [HeroeComponent, ListaComponent]
 })
 export class App {
   public title: string  = "CONTADOR";

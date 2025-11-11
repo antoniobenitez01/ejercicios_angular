@@ -1,0 +1,5 @@
+img {width: 100px}
+h1{margin-top:7vh;margin-bottom:5vh}
+li{padding:1vw;padding-left:1.5vw}
+button{margin-top:2vh;transition:0.025s}
+button:active{transform:scale(0.95)}

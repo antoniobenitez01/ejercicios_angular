@@ -1,0 +1,10 @@
+<h1 class="display-1">Tarea 4.2 Datos del Instituto</h1>
+<ul class="list-group">
+  <li class="list-group-item list-group-item-primary"><h3>INFORMACIÓN DEL CENTRO</h3></li>
+  <li class="list-group-item"><b>Centro Educativo:</b>&nbsp;&nbsp;{{ centro }}</li>
+  <li class="list-group-item"><b>Localidad:</b>&nbsp;&nbsp;{{ localidad }}</li>
+  <li class="list-group-item"><b>Familias Profesionales:</b>&nbsp;&nbsp;{{ familias }}</li>
+  <li class="list-group-item"><b>CENTRO:</b>&nbsp;&nbsp;{{ centroCapitalizado }}</li>
+  <li class="list-group-item"><b>Logo:</b>&nbsp;&nbsp;<img src="{{ logo }}" class="img-thumbnail"/></li>
+</ul>
+<button (click)="cambiarInstituto()" class="btn btn-primary btn-lg btn-block">CAMBIAR INSTITUTO</button>
