@@ -13,10 +13,16 @@
   <dd></dd>
 </dl>
 
-<button class="btn btn-primary" (click)="cambiarNombre('Cambiado')">
+@if(nombre != "Vegeta"){
+  <button class="btn btn-primary" (click)="cambiarNombre()">
   Cambiar nombre
-</button>
+  </button>
+}@else{
+  <button class="btn btn-primary" (click)="reestablecer()">
+  Cambiar nombre
+  </button>
+}
 
-<button class="btn btn-primary" (click)="cambiarEdad(50)">
+<button class="btn btn-primary" (click)="cambiarEdad()">
   Cambiar edad
 </button>

@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-heroe',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './heroe.html',
   styleUrl: './heroe.css',
 })
@@ -18,11 +19,15 @@ export class HeroeComponent {
     return `${this.nombre} : ${this.edad}`
   }
 
-  public cambiarNombre(nombre: string): void {
-    this.nombre = nombre;
+  public cambiarNombre(): void {
+    this.nombre = "Vegeta";
   }
 
-  public cambiarEdad(edad: number): void {
-    this.edad = edad;
+  public reestablecer(): void {
+    this.nombre = "Goku";
+  }
+
+  public cambiarEdad(): void {
+    this.edad++;
   }
 }

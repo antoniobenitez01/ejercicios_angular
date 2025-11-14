@@ -1,0 +1,46 @@
+<h1 class="display-1">Tarea 4.3 Listado de Centros</h1>
+<div>
+  @if(getListaSize() > 0){
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-primary"><h3>INFORMACIÓN DEL CENTRO</h3></li>
+      <li class="list-group-item"><b>Centro Educativo:</b>&nbsp;&nbsp;{{ listaCentros[posicion].nombre }}</li>
+      <li class="list-group-item"><b>Localidad:</b>&nbsp;&nbsp;{{ listaCentros[posicion].nombre }}</li>
+      <li class="list-group-item"><b>Familias Profesionales:</b>&nbsp;&nbsp;{{ listaCentros[posicion].nombre }}</li>
+      <li class="list-group-item"><b>CENTRO:</b>&nbsp;&nbsp;{{ listaCentros[posicion].nombre }}</li>
+      <li class="list-group-item"><b>Logo:</b>&nbsp;&nbsp;<img src="{{ listaCentros[posicion].logo }}" class="img-thumbnail"/></li>
+    </ul>
+  }@else {
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-primary"><h3>INFORMACIÓN DEL CENTRO</h3></li>
+      <li class="list-group-item"> No hay ningún Centro registrado.</li>
+    </ul>
+  }
+  <ul class="list-group">
+    <li class="list-group-item list-group-item-primary"><h3>PILA DE CENTROS</h3></li>
+    @if(this.getPilaSize() > 0){
+      @for(centro of pilaCentros; track centro){
+        <li class="list-group-item">{{centro.nombre}}</li>
+      }
+    }@else {
+      <li class="list-group-item">No hay ningún Centro en la Pila</li>
+    }
+  </ul>
+</div>
+
+<div>
+  @if(posicion > 0){
+    <button class="btn btn-secondary" style="position:absolute;left:35vw" (click)="anterior()">←</button>
+  }
+  <button class="btn btn-danger" (click)="eliminarCentro()">ELIMINAR CENTRO</button>
+  <button class="contador">
+    @if(getListaSize() > 0){
+      {{ posicion + 1 }}
+    }@else {
+      {{ posicion }}
+    }
+  </button>
+  <button class="btn btn-success" (click)="sacarPila()">SACAR DE PILA</button>
+  @if(posicion < getListaSize()-1){
+    <button class="btn btn-secondary" style="position:absolute;right:35vw" (click)="posterior()">→</button>
+  }
+</div>
