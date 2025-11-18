@@ -1,17 +1,10 @@
 import { Component } from '@angular/core';
 
-export class Centro{
-  public nombre : string;
-  public localidad : string;
-  public ciclos : string[];
-  public logo : string;
-
-  constructor(nombre:string,localidad:string,ciclos:string[],logo:string){
-    this.nombre = nombre;
-    this.localidad = localidad;
-    this.ciclos = ciclos;
-    this.logo = logo;
-  }
+export interface Centro{
+  nombre : string;
+  localidad : string;
+  ciclos : string[];
+  logo : string;
 }
 
 const centro1 : Centro = {nombre: "I.E.S. Playamar", localidad: "Torremolinos", ciclos: ["DAM","DAW"], logo: "playamar.png"}

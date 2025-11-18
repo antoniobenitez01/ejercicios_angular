@@ -10,7 +10,7 @@ import { Component} from '@angular/core';
     <button (click)="resetear()">RESET</button>
     <button (click)="decrementar()">-{{ cantidad }}</button>
   </div>`,
-  styleUrl: '../app.css',
+  standalone: false
 })
 
 export class ContadorComponent {

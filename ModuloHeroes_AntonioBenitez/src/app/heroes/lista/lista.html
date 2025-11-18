@@ -1,0 +1,14 @@
+<h1>LISTA DE HEROES</h1>
+
+<button class="btn btn-outline-danger" (click)="borrarHeroe()">BORRAR HEROE</button>
+@if(!heroeEliminado){
+  <h3>No ha eliminado ningún héroe</h3>
+}@else{
+  <h3>Héroe eliminado: {{ heroeEliminado }}</h3>
+}
+
+<ul class="nt-2 list-group">
+  @for(nombre of nombreHeroes; track nombre){
+    <li class="list-group-item">{{ nombre }}</li>
+  }
+</ul>

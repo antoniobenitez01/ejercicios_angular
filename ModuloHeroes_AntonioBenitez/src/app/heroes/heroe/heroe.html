@@ -1,0 +1,28 @@
+<h1>Goku</h1>
+<dl>
+  <td><b>Nombre:</b> {{ nombre }}</td>
+  <dd></dd>
+
+  <td><b>Edad:</b> {{ edad }}</td>
+  <dd></dd>
+
+  <td><b>Método:</b> {{ getDescriptionHeroe() }}</td>
+  <dd></dd>
+
+  <td><b>Capitalizado:</b> {{ nombreCapitalizado }}</td>
+  <dd></dd>
+</dl>
+
+@if(nombre != "Vegeta"){
+  <button class="btn btn-primary" (click)="cambiarNombre()">
+  Cambiar nombre
+  </button>
+}@else{
+  <button class="btn btn-primary" (click)="reestablecer()">
+  Cambiar nombre
+  </button>
+}
+
+<button class="btn btn-primary" (click)="cambiarEdad()">
+  Cambiar edad
+</button>

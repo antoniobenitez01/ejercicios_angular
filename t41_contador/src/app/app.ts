@@ -1,12 +1,12 @@
 import { Component, signal } from '@angular/core';
-import { ListaComponent } from "./heroes/lista/lista";
+import { ContadorModule } from './module.contador/contador.module';
 
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.html',
   styleUrl: './app.css',
-  imports: [ListaComponent]
+  imports: [ ContadorModule ]
 })
 export class App {
   public title: string  = "CONTADOR";
